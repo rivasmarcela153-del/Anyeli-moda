@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>top Moda</title>
+</head>
+<body>
+    <h1>Formulario de Contacto</h1>
+  <p>Por favor complete los campos obligatorios marcados con *.</p>
+
+  <form action="#" method="post">
+    <label for="nombre">Nombre(s) *:</label><br>
+    <input type="text" id="nombre" name="nombre" required><br><br>
+
+    <label for="apellido">Apellido(s) *:</label><br>
+    <input type="text" id="apellido" name="apellido" required><br><br>
+
+    <label for="email">Correo electrónico *:</label><br>
+    <input type="email" id="email" name="email" required><br><br>
+
+    <label for="telefono">Teléfono:</label><br>
+    <input type="tel" id="telefono" name="telefono"><br><br>
+
+    <label for="fecha">Fecha:</label><br>
+    <input type="date" id="fecha" name="fecha"><br><br>
+
+    <label for="asunto">Asunto:</label><br>
+    <select id="asunto" name="asunto">
+      <option value="">-- Selecciona --</option>
+      <option value="info">Información</option>
+      <option value="soporte">Soporte</option>
+      <option value="cotizacion">Cotización</option>
+    </select><br><br>
+
+    <p>Preferencia de contacto:</p>
+    <input type="radio" id="contactoEmail" name="contacto" value="email" checked>
+    <label for="contactoEmail">Correo</label><br>
+    <input type="radio" id="contactoTel" name="contacto" value="telefono">
+    <label for="contactoTel">Teléfono</label><br>
+    <input type="radio" id="contactoWhatsapp" name="contacto" value="whatsapp">
+    <label for="contactoWhatsapp">WhatsApp</label><br><br>
+
+    <p>Intereses:</p>0
+    <input type="checkbox" id="novedades" name="intereses" value="novedades">
+    <label for="novedades">Novedades</label><br>
+    <input type="checkbox" id="ofertas" name="intereses" value="ofertas">
+    <label for="ofertas">Ofertas</label><br>
+    <input type="checkbox" id="beta" name="intereses" value="beta">
+    <label for="beta">Ser beta tester</label><br><br>
+
+    <label for="archivo">Adjuntar archivo:</label><br>
+    <input type="file" id="archivo" name="archivo"><br><br>
+
+    <label for="mensaje">Mensaje *:</label><br>
+    <textarea id="mensaje" name="mensaje" required></textarea><br><br>
+
+    <input type="checkbox" id="consent" name="consent" required>
+    <label for="consent">Acepto el tratamiento de mis datos personales *</label><br><br>
+
+    <button type="submit">Enviar</button>
+    <button type="reset">Limpiar</button>
+  </form>
+
+</body>
+</html>
