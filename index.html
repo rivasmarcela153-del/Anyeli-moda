@@ -1,66 +1,115 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>top Moda</title>
+    <title>Anyeli - Todo a la Moda</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;500&display=swap">
+    <style>
+        /* Estilos generales */
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(to bottom right, #fbe9e7, #fce4ec);
+            color: #333;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        /* Contenedor principal */
+        .portada {
+            text-align: center;
+            background: white;
+            padding: 60px 40px;
+            border-radius: 25px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+            max-width: 600px;
+            animation: fadeIn 2s ease;
+        }
+
+        /* Imagen principal */
+        .portada img {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            object-fit: cover;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            margin-bottom: 20px;
+        }
+
+        /* Título */
+        .portada h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3em;
+            margin: 0;
+            color: #e91e63;
+        }
+
+        /* Subtítulo */
+        .portada h2 {
+            font-weight: 300;
+            margin: 10px 0 30px;
+            color: #555;
+        }
+
+        /* Botón */
+        .btn {
+            background-color: #e91e63;
+            color: white;
+            padding: 12px 30px;
+            border: none;
+            border-radius: 30px;
+            font-size: 1em;
+            text-decoration: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #c2185b;
+            transform: scale(1.05);
+        }
+
+        /* Animación */
+        @keyframes fadeIn {
+            from {opacity: 0; transform: translateY(30px);}
+            to {opacity: 1; transform: translateY(0);}
+        }
+
+        /* Decoraciones de fondo */
+        .burbuja {
+            position: absolute;
+            border-radius: 50%;
+            background: rgba(233, 30, 99, 0.2);
+            animation: flotar 8s infinite ease-in-out;
+        }
+
+        .burbuja:nth-child(1) { width: 120px; height: 120px; top: 10%; left: 10%; }
+        .burbuja:nth-child(2) { width: 80px; height: 80px; bottom: 15%; right: 15%; animation-delay: 2s; }
+        .burbuja:nth-child(3) { width: 150px; height: 150px; top: 60%; left: 70%; animation-delay: 4s; }
+
+        @keyframes flotar {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
+    </style>
 </head>
 <body>
-    <h1>Formulario de Contacto</h1>
-  <p>Por favor complete los campos obligatorios marcados con *.</p>
+    <div class="burbuja"></div>
+    <div class="burbuja"></div>
+    <div class="burbuja"></div>
 
-  <form action="#" method="post">
-    <label for="nombre">Nombre(s) *:</label><br>
-    <input type="text" id="nombre" name="nombre" required><br><br>
+    <div class="portada">
+        <!-- 🌸 Imagen agregada -->
+        <img src="img/imagen1..jpg" alt="Moda femenina">
 
-    <label for="apellido">Apellido(s) *:</label><br>
-    <input type="text" id="apellido" name="apellido" required><br><br>
-
-    <label for="email">Correo electrónico *:</label><br>
-    <input type="email" id="email" name="email" required><br><br>
-
-    <label for="telefono">Teléfono:</label><br>
-    <input type="tel" id="telefono" name="telefono"><br><br>
-
-    <label for="fecha">Fecha:</label><br>
-    <input type="date" id="fecha" name="fecha"><br><br>
-
-    <label for="asunto">Asunto:</label><br>
-    <select id="asunto" name="asunto">
-      <option value="">-- Selecciona --</option>
-      <option value="info">Información</option>
-      <option value="soporte">Soporte</option>
-      <option value="cotizacion">Cotización</option>
-    </select><br><br>
-
-    <p>Preferencia de contacto:</p>
-    <input type="radio" id="contactoEmail" name="contacto" value="email" checked>
-    <label for="contactoEmail">Correo</label><br>
-    <input type="radio" id="contactoTel" name="contacto" value="telefono">
-    <label for="contactoTel">Teléfono</label><br>
-    <input type="radio" id="contactoWhatsapp" name="contacto" value="whatsapp">
-    <label for="contactoWhatsapp">WhatsApp</label><br><br>
-
-    <p>Intereses:</p>0
-    <input type="checkbox" id="novedades" name="intereses" value="novedades">
-    <label for="novedades">Novedades</label><br>
-    <input type="checkbox" id="ofertas" name="intereses" value="ofertas">
-    <label for="ofertas">Ofertas</label><br>
-    <input type="checkbox" id="beta" name="intereses" value="beta">
-    <label for="beta">Ser beta tester</label><br><br>
-
-    <label for="archivo">Adjuntar archivo:</label><br>
-    <input type="file" id="archivo" name="archivo"><br><br>
-
-    <label for="mensaje">Mensaje *:</label><br>
-    <textarea id="mensaje" name="mensaje" required></textarea><br><br>
-
-    <input type="checkbox" id="consent" name="consent" required>
-    <label for="consent">Acepto el tratamiento de mis datos personales *</label><br><br>
-
-    <button type="submit">Enviar</button>
-    <button type="reset">Limpiar</button>
-  </form>
-
+        <h1>Anyeli</h1>
+        <h2>Todo a la Moda 👗✨</h2>
+        <p>Descubre las últimas tendencias, estilo y elegancia en un solo lugar.</p>
+        <a href="pag2.html" class="btn">Entrar</a>
+    </div>
 </body>
 </html>

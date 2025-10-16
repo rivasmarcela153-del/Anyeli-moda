@@ -1,0 +1,418 @@
+/* ==============================
+   RESETEO Y BASE
+============================== */
+* {
+  box-sizing: border-box; /* evita crecimiento por padding/margin */
+}
+
+body {
+  font-family: "Roboto";
+  font-size: 16px;
+}
+
+p {
+  color: black;
+}
+
+a {
+  display: inline-block; /* inline con alto/ancho */
+  text-decoration: none;
+}
+
+/* ==============================
+   HEADER
+============================== */
+header {
+  padding: 15px 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  background-color: rgb(0, 0, 0);
+  width: 100%;
+}
+
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header .container .logo {
+  width: 100px;
+}
+
+header .container nav a {
+  color: rgb(255, 0, 0);
+  margin: 0 15px;
+}
+
+/* ==============================
+   LAYOUT (GRID)
+============================== */
+.container {
+  width: 1140px;
+  margin: 0 auto;
+  padding: 0 15px;
+  position: relative;
+}
+
+.container-fluid {
+  width: 100%;
+  padding: 0 15px;
+  position: relative;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -15px;
+}
+
+.columna {
+  padding: 0 15px;
+}
+
+.columna-33 { width: 33.33%; }
+.columna-41 { width: 41.66%; }
+.columna-50 { width: 50%; }
+
+.empujar-66 { margin-left: 66.66%; }
+.empujar-58 { margin-left: 58.33%; }
+.empujar-50 { margin-left: 50%; }
+.empujar-0  { margin-left: 0; }
+
+/* ==============================
+   BOTONES
+============================== */
+.boton {
+  text-align: center;
+  text-decoration: none;
+  padding: 15px 20px;
+  border: none;
+}
+
+.boton.boton-rojo {
+  background-color: red;
+  color: rgb(255, 255, 255);
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.boton.boton-blanco {
+  background-color: white;
+  color: red;
+  font-size: 18px;
+  font-weight: bold;
+  border: 1px solid red;
+}
+
+.boton.boton-negro {
+  background-color: black;
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.boton.boton-negro:hover {
+  background-color: white;
+  color: black;
+}
+
+/* ==============================
+   SECCIONES
+============================== */
+.seccion {
+  padding: 60px 0;
+}
+
+/* ==============================
+   CUADRADO PERFECTO (para galería, etc.)
+============================== */
+.cuadrado-perfecto {
+  width: 100%;
+  padding-bottom: 100%;
+  position: relative;
+}
+
+.cuadrado-perfecto img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/* ==============================
+   INICIO
+============================== */
+#inicio {
+  position: relative;
+}
+
+#inicio img {
+  width: 100%;
+  display: block;
+}
+
+#inicio .bloque-inicio {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  width: 400px;
+  text-align: center;
+  margin-left: -200px;
+}
+
+#inicio .bloque-inicio h1 {
+  color: white;
+  font-size: 35px;
+}
+
+#inicio .bloque-inicio p {
+  color: white;
+}
+
+/* ==============================
+   NOSOTROS
+============================== */
+#nosotros {
+  background-image: url(img/latas.jpg);
+  background-size: cover;
+  color: white;
+  text-align: center;
+}
+
+#nosotros p {
+  color: white;
+  font-size: 16px;
+  margin: 0;
+}
+
+/* ==============================
+   SERVICIOS
+============================== */
+#servicios .bloque-servicio {
+  border: 1px solid gray;
+}
+
+#servicios .bloque-servicio .bloque-img-servicio img {
+  width: 100%;
+}
+
+#servicios .bloque-servicio .bloque-contenido-servicio.cuadrado-perfecto {
+  padding-bottom: 56.25%;  
+}
+
+#servicios .bloque-servicio .bloque-contenido-servicio {
+  padding: 15px;
+}
+
+#servicios .bloque-servicio .bloque-contenido-servicio h3 {
+  margin-top: 0;
+  font-size: 25px;
+}
+
+/* ==============================
+   GALERÍA
+============================== */
+#galeria h4 {
+  padding: 0 15px;
+  text-align: center;
+  position: absolute;
+  top: 40%;
+  color: white;
+  font-size: 28px;
+  width: 100%;
+}
+
+#galeria img {
+  filter: grayscale(1);
+}
+
+#galeria .cuadrado-perfecto:hover img {
+  filter: grayscale(0);
+}
+
+#galeria .cuadrado-perfecto:hover h4 {
+  display: none;
+}
+
+/* ===========================
+   SECCIÓN CONTACTENOS
+   =========================== */
+#contactenos {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  min-height: 500px;
+}
+
+#contactenos .mapa {
+  flex: 1;
+  min-height: 100px;
+}
+
+#contactenos iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.formulario-contacto {
+  background: white;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+  position: relative;
+  z-index: 2;
+}
+
+.formulario-contacto h2 {
+  margin-bottom: 10px;
+  font-size: 28px;
+  color: #e60000;
+}
+
+.formulario-contacto p {
+  margin-bottom: 20px;
+  color: #555;
+  font-size: 15px;
+}
+
+/* Inputs */
+.formulario-contacto .form-control {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  font-size: 15px;
+  transition: all 0.3s;
+}
+
+.formulario-contacto .form-control:focus {
+  border-color: #e60000;
+  outline: none;
+  box-shadow: 0 0 8px rgba(230, 0, 0, 0.3);
+}
+
+/* Botón */
+.formulario-contacto .boton {
+  display: inline-block;
+  padding: 12px 20px;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  text-align: center;
+}
+
+.formulario-contacto .boton-rojo {
+  background: #e60000;
+  color: white;
+  border: none;
+  transition: background 0.3s;
+}
+
+.formulario-contacto .boton-rojo:hover {
+  background: #c40000;
+}
+
+
+/* ===========================
+   FOOTER
+   =========================== */
+footer {
+  background: #222;
+  color: white;
+  padding-top: 40px;
+  margin-top: 40px;
+  width: 100%;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+footer .container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; /* ✅ distribuye mejor las columnas */
+  gap: 40px; /* ✅ más separación entre columnas */
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+/* Columnas */
+footer .columna {
+  flex: 1;
+  min-width: 220px;
+}
+
+footer .logo-footer {
+  width: 120px;
+  margin-bottom: 15px;
+}
+
+/* Titulos */
+footer h3 {
+  margin-bottom: 15px;
+  font-size: 18px;
+  color: #ffcc00;
+}
+
+/* Texto */
+footer p {
+  margin-bottom: 15px;
+  color: white;
+}
+
+/* Listas */
+footer ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+footer ul li {
+  margin-bottom: 10px;
+}
+
+footer ul li a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+footer ul li a:hover {
+  color: #ffcc00;
+}
+
+/* Redes sociales */
+.redes {
+  display: flex;
+  gap: 15px;
+  padding: 0;
+  margin-top: 10px; /* ✅ separa de "Datos de contacto" */
+}
+
+.redes a {
+  color: white;
+  font-size: 20px;
+  transition: color 0.3s;
+}
+
+.redes a:hover {
+  color: #ffcc00;
+}
+
+/* Barra inferior */
+.barra-footer {
+  text-align: center;
+  padding: 15px;
+  background: #111;
+  margin-top: 20px;
+  font-size: 14px;
+}
+
